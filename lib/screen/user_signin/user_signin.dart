@@ -26,10 +26,10 @@ class _UserSigninState extends State<UserSignin> {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
           child: Column(
             children: [
-              Align(
+              const Align(
                 alignment: Alignment.centerLeft,
                 child: Text(
                   'User Sign in',
@@ -39,7 +39,7 @@ class _UserSigninState extends State<UserSignin> {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 48,
               ),
               CustomTextInput(
@@ -47,7 +47,7 @@ class _UserSigninState extends State<UserSignin> {
                 prefixPath: 'assets/svg/fill-person.svg',
                 controller: nameController,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 16,
               ),
               CustomTextInput(
@@ -55,7 +55,7 @@ class _UserSigninState extends State<UserSignin> {
                 prefixPath: 'assets/svg/mail.svg',
                 controller: emailController,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 28,
               ),
               CustomButton(

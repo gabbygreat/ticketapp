@@ -103,11 +103,11 @@ class TicketPrint extends StatelessWidget {
                 children: [
                   Container(
                     height: 520,
-                    margin: EdgeInsets.symmetric(
+                    margin: const EdgeInsets.symmetric(
                       horizontal: 20,
                     ),
                     width: double.maxFinite,
-                    padding: EdgeInsets.only(
+                    padding: const EdgeInsets.only(
                         top: 40, left: 20, right: 20, bottom: 16),
                     decoration: BoxDecoration(
                       border: Border.all(color: ColorConstant.grayColor),
@@ -128,7 +128,7 @@ class TicketPrint extends StatelessWidget {
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,
                                       children: [
-                                        Text(
+                                        const Text(
                                           'USER ID',
                                           style: TextStyle(
                                             fontWeight: FontWeight.w500,
@@ -137,16 +137,16 @@ class TicketPrint extends StatelessWidget {
                                             ),
                                           ),
                                         ),
-                                        Text(
+                                        const Text(
                                           '1',
                                           style: TextStyle(
                                             fontWeight: FontWeight.w400,
                                           ),
                                         ),
-                                        SizedBox(
+                                        const SizedBox(
                                           height: 16,
                                         ),
-                                        Text(
+                                        const Text(
                                           'Name',
                                           style: TextStyle(
                                             fontWeight: FontWeight.w500,
@@ -155,16 +155,16 @@ class TicketPrint extends StatelessWidget {
                                             ),
                                           ),
                                         ),
-                                        Text(
+                                        const Text(
                                           'Oranekwu Gabriel',
                                           style: TextStyle(
                                             fontWeight: FontWeight.w400,
                                           ),
                                         ),
-                                        SizedBox(
+                                        const SizedBox(
                                           height: 16,
                                         ),
-                                        Text(
+                                        const Text(
                                           'Boarding time',
                                           style: TextStyle(
                                             fontWeight: FontWeight.w500,
@@ -177,7 +177,7 @@ class TicketPrint extends StatelessWidget {
                                           DateFormat('d/MM/yy, hh:mm a')
                                               .format(DateTime.now())
                                               .toLowerCase(),
-                                          style: TextStyle(
+                                          style: const TextStyle(
                                             fontWeight: FontWeight.w400,
                                           ),
                                         ),
@@ -188,7 +188,7 @@ class TicketPrint extends StatelessWidget {
                                     child: Column(
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,
-                                      children: [
+                                      children: const [
                                         Text(
                                           'Ticket ID',
                                           style: TextStyle(
@@ -245,10 +245,10 @@ class TicketPrint extends StatelessWidget {
                                   ),
                                 ],
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 16,
                               ),
-                              Align(
+                              const Align(
                                 alignment: Alignment.centerLeft,
                                 child: Text(
                                   'Email',
@@ -260,7 +260,7 @@ class TicketPrint extends StatelessWidget {
                                   ),
                                 ),
                               ),
-                              Align(
+                              const Align(
                                 alignment: Alignment.centerLeft,
                                 child: Text(
                                   'gabrieloranekwu@gmail.com',
@@ -281,10 +281,10 @@ class TicketPrint extends StatelessWidget {
                                 height: 172,
                                 width: 173.3,
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 20,
                               ),
-                              Text(
+                              const Text(
                                 'Generated 17:44, 12 Jul 22',
                                 style: TextStyle(
                                   fontWeight: FontWeight.w400,
@@ -311,7 +311,7 @@ class TicketPrint extends StatelessWidget {
                         ),
                         Expanded(
                           child: Padding(
-                            padding: EdgeInsets.symmetric(horizontal: 1),
+                            padding: const EdgeInsets.symmetric(horizontal: 1),
                             child: CustomPaint(
                               painter: LineDashes(
                                   thickness: 2, color: ColorConstant.grayColor),
@@ -379,9 +379,9 @@ class ArcPaint extends CustomPainter {
       // ..color = EventryColor('#F3F4F6')
       ..color = Colors.white
       ..style = PaintingStyle.fill;
-    canvas.drawArc(Rect.fromLTRB(0, 0, 40, 40), isLeft ? -pi / 2 : pi / 2, pi,
+    canvas.drawArc(const Rect.fromLTRB(0, 0, 40, 40), isLeft ? -pi / 2 : pi / 2, pi,
         false, paint);
-    canvas.drawArc(Rect.fromLTRB(0, 0, 40, 40), isLeft ? -pi / 2 : pi / 2,
+    canvas.drawArc(const Rect.fromLTRB(0, 0, 40, 40), isLeft ? -pi / 2 : pi / 2,
         pi * 2, false, paint2);
     // canvas.drawArc(
     //     Rect.fromLTRB(0, 0, height, height), -pi / 2, -pi + .55, false, paint);

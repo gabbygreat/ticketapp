@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:ticketapp/component/user_admin_card.dart';
 import 'package:ticketapp/screen/user_signin/user_signin.dart';
-import 'package:ticketapp/utils/constants.dart';
 
 class UserAdminSelection extends StatelessWidget {
   const UserAdminSelection({super.key});

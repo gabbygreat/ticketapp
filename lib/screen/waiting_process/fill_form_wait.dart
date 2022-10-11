@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:ticketapp/screen/purchase/purchase.dart';
 import 'package:ticketapp/screen/ticket_payment/ticket_payment.dart';
-import 'package:ticketapp/utils/constants.dart';
 
 class FillFormWait extends StatelessWidget {
   const FillFormWait({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: TicketPayment(),
       // body: FutureBuilder(
       //   future: Future.delayed(
