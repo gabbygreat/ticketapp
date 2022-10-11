@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:ticketapp/component/appbar.dart';
 import 'package:ticketapp/component/button.dart';
 import 'package:ticketapp/component/textinput.dart';
-import 'package:ticketapp/screen/ticket_payment/ticket_payment.dart';
 import 'package:ticketapp/screen/waiting_process/fill_form_wait.dart';
 import 'package:ticketapp/utils/constants.dart';
 
@@ -12,30 +11,30 @@ class FillForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(title: 'Fill form'),
+      appBar: const CustomAppBar(title: 'Fill form'),
       body: ListView(
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
         children: [
-          CustomTextInput(
+          const CustomTextInput(
               prefixPath: 'assets/svg/fill-person.svg', titleText: 'Name'),
-          SizedBox(
+          const SizedBox(
             height: 16,
           ),
-          CustomTextInput(
+          const CustomTextInput(
               prefixPath: 'assets/svg/mail.svg', titleText: 'Email'),
-          SizedBox(
+          const SizedBox(
             height: 16,
           ),
-          CustomTextInput(
+          const CustomTextInput(
               prefixPath: 'assets/svg/fill-person.svg',
               titleText: 'Destination'),
-          SizedBox(
+          const SizedBox(
             height: 16,
           ),
-          CustomTextInput(
+          const CustomTextInput(
               prefixPath: 'assets/svg/fill-person.svg',
               titleText: 'Boarding time'),
-          SizedBox(
+          const SizedBox(
             height: 28,
           ),
           CustomButton(

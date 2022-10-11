@@ -114,19 +114,19 @@ class CustomTextInput extends StatelessWidget {
             filled: true,
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(16),
-              borderSide: BorderSide(color: Color(0xFFF3F4F6)),
+              borderSide: const BorderSide(color: Color(0xFFF3F4F6)),
             ),
             enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(16),
-              borderSide: BorderSide(color: Color(0xFFF3F4F6)),
+              borderSide: const BorderSide(color: Color(0xFFF3F4F6)),
             ),
             focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(16),
-              borderSide: BorderSide(color: Color(0xFFF3F4F6)),
+              borderSide: const BorderSide(color: Color(0xFFF3F4F6)),
             ),
             errorBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(16),
-              borderSide: BorderSide(
+              borderSide: const BorderSide(
                 color: Colors.red,
               ),
             ),
