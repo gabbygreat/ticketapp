@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ticketapp/component/button.dart';
 import 'package:ticketapp/component/textinput.dart';
-import 'package:ticketapp/screen/waiting_process/sigin_wait.dart';
+
 import 'package:ticketapp/utils/constants.dart';
 
 import '../user_signin/user_signin.dart';

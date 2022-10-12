@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:ticketapp/component/button.dart';
 import 'package:ticketapp/component/textinput.dart';
-import 'package:ticketapp/screen/waiting_process/sigin_wait.dart';
+
 import 'package:ticketapp/utils/constants.dart';
+
+import '../waiting_process/admin_signin_wait.dart';
 
 class AdminSignin extends StatefulWidget {
   const AdminSignin({super.key});
@@ -71,7 +73,7 @@ class _AdminSigninState extends State<AdminSignin> {
                       emailController.text.isNotEmpty) {
                     Navigator.of(context).push(
                       MaterialPageRoute(
-                        builder: (context) => const SigninWait(),
+                        builder: (context) => const SigninWait2(),
                       ),
                     );
                   }
