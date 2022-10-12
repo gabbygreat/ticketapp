@@ -3,7 +3,6 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:ticketapp/screen/fill_form/fill_form.dart';
 import 'package:ticketapp/screen/scan_Qr/scan.dart';
 import 'package:ticketapp/utils/constants.dart';
 import 'dart:math' as math;
@@ -18,7 +17,6 @@ class ScanQr extends StatefulWidget {
 class _ScanQrState extends State<ScanQr> with TickerProviderStateMixin {
   late PageController pageController;
   late Timer timer;
- 
 
   @override
   void initState() {
@@ -94,19 +92,11 @@ class ScanTicket extends StatelessWidget {
               width: 211,
               child: Stack(
                 children: [
-                  GestureDetector(
-                    onTap: () => Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (context) => const FillForm(),
-                      ),
-                    ),
-                    child: SizedBox(
-                      height: 162,
-                      width: 211,
-                      child: CustomPaint(
-                        painter:
-                            DashRectPainter(color: ColorConstant.grayColor),
-                      ),
+                  SizedBox(
+                    height: 162,
+                    width: 211,
+                    child: CustomPaint(
+                      painter: DashRectPainter(color: ColorConstant.grayColor),
                     ),
                   ),
                   Center(
@@ -114,12 +104,15 @@ class ScanTicket extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         InkWell(
-                            onTap:  () {
-            Navigator.of(context).push(MaterialPageRoute(
-              builder: (context) => const QRViewExample(),
-            ));
+                            onTap: () {
+                              Navigator.pushNamedAndRemoveUntil(
+                                  context, '/QRViewExample', (route) => false);
                             },
-                            child: const Icon(Icons.camera_alt, size: 40, color: Colors.grey,)),
+                            child: const Icon(
+                              Icons.camera_alt,
+                              size: 40,
+                              color: Colors.grey,
+                            )),
                         Text(
                           'Tap on camera to\n\t\t\t\tscan a ticket',
                           style: TextStyle(
