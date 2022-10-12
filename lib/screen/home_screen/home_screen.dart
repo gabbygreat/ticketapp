@@ -3,6 +3,8 @@ import 'package:ticketapp/component/button.dart';
 import 'package:ticketapp/screen/user_admin_screen/user_admin.dart';
 import 'package:ticketapp/utils/constants.dart';
 
+import '../user_admin_screen/user_admin_register.dart';
+
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
@@ -16,7 +18,11 @@ class HomeScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             CustomButton(
-              onTap: () {},
+              onTap: () => Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => const UserAdminSelectionR(),
+                ),
+              ),
               text: 'Create an account',
               backgroundColor: ColorConstant.primaryColor,
               textColor: Colors.white,

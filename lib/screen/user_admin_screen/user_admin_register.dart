@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:ticketapp/component/user_admin_card.dart';
 import 'package:ticketapp/screen/user_signin/user_signin.dart';
 
-import '../user_signin/user_signout.dart';
+import '../user_create_account/admin_create_account.dart';
+import '../user_create_account/user_create.dart';
 
-class UserAdminSelection extends StatelessWidget {
-  const UserAdminSelection({super.key});
+class UserAdminSelectionR extends StatelessWidget {
+  const UserAdminSelectionR({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -18,11 +19,11 @@ class UserAdminSelection extends StatelessWidget {
               Expanded(
                 child: UserAdminCard(
                   title: 'User',
-                  description: 'If you’re looking to buy tickets',
+                  description: 'Register as a user',
                   svgName: 'person',
                   onTap: () => Navigator.of(context).push(
                     MaterialPageRoute(
-                      builder: (context) => const UserSignin(),
+                      builder: (context) => const UserCreateAccount(),
                     ),
                   ),
                 ),
@@ -33,11 +34,11 @@ class UserAdminSelection extends StatelessWidget {
                Expanded(
                 child: UserAdminCard(
                   title: 'Admin',
-                  description: 'If you’re a staff that scans tickets',
+                  description: "Staff are entitiled to use their ID's to register",
                   svgName: 'staff',
-                  onTap: () => Navigator.of(context).push(
+                   onTap: () => Navigator.of(context).push(
                     MaterialPageRoute(
-                      builder: (context) => const AdminSignin(),
+                      builder: (context) => const AdminCreateAccount(),
                     ),
                   ),
                 ),
