@@ -1,24 +1,28 @@
 import 'package:flutter/material.dart';
 import 'package:ticketapp/component/button.dart';
 import 'package:ticketapp/component/textinput.dart';
-import 'package:ticketapp/screen/waiting_process/sigin_wait.dart';
+
 import 'package:ticketapp/utils/constants.dart';
 
-class UserSignin extends StatefulWidget {
-  const UserSignin({super.key});
+import '../user_signin/user_signin.dart';
+
+class UserCreateAccount extends StatefulWidget {
+  const UserCreateAccount({super.key});
 
   @override
-  State<UserSignin> createState() => _UserSigninState();
+  State<UserCreateAccount> createState() => _UserCreateAccountState();
 }
 
-class _UserSigninState extends State<UserSignin> {
+class _UserCreateAccountState extends State<UserCreateAccount> {
+  late TextEditingController nameController;
   late TextEditingController emailController;
   late TextEditingController passwordController;
   @override
   void initState() {
     super.initState();
-    passwordController = TextEditingController();
+    nameController = TextEditingController();
     emailController = TextEditingController();
+    passwordController = TextEditingController();
   }
 
   @override
@@ -32,7 +36,7 @@ class _UserSigninState extends State<UserSignin> {
               const Align(
                 alignment: Alignment.centerLeft,
                 child: Text(
-                  'User Sign in',
+                  'User Create Account',
                   style: TextStyle(
                     fontWeight: FontWeight.w700,
                     fontSize: 24,
@@ -43,33 +47,38 @@ class _UserSigninState extends State<UserSignin> {
                 height: 48,
               ),
               CustomTextInput(
+                titleText: 'Name',
+                prefixPath: 'assets/svg/fill-person.svg',
+                controller: nameController,
+              ),
+              const SizedBox(
+                height: 16,
+              ),
+              CustomTextInput(
                 titleText: 'Email',
                 prefixPath: 'assets/svg/mail.svg',
                 controller: emailController,
               ),
               const SizedBox(
-                height: 16,
+                height: 28,
               ),
               CustomTextInput(
                 titleText: 'Password',
                 prefixPath: 'assets/svg/mail.svg',
                 controller: passwordController,
               ),
-              const SizedBox(
-                height: 28,
-              ),
               CustomButton(
                 onTap: () {
-                  if (passwordController.text.isNotEmpty &&
-                      emailController.text.isNotEmpty) {
+                  if (nameController.text.isNotEmpty &&
+                      emailController.text.isNotEmpty &&  passwordController.text.isNotEmpty) {
                     Navigator.of(context).push(
                       MaterialPageRoute(
-                        builder: (context) => const SigninWait(),
+                        builder: (context) => const UserSignin(),
                       ),
                     );
                   }
                 },
-                text: 'Sign in',
+                text: 'Create Account',
                 textColor: Colors.white,
                 backgroundColor: ColorConstant.primaryColor,
               )
